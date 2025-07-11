@@ -1,0 +1,41 @@
+#menu {
+  background-color: var(--primary-dark);
+  width: clamp(300px, 30vw, 400px);
+  height: 100vh;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 50px;
+  margin-bottom: 2rem;
+}
+
+.star-logo {
+  width: clamp(100px, 5%, 550px);
+}
+
+.dashboard-logo {
+  width: clamp(200px, 8%, 250px);
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 4rem;
+  gap: 40px;
+}
+
+.menu button {
+  color: var(--secondary-highlight-2);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+
+.menu .active {
+  color: var(--secondary-highlight-1);
+}
