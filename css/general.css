@@ -19,11 +19,12 @@ h1, h2, h3, h4, h5 {
 
 html, body {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
 }
 
 body {
+  min-height: 100%;
   background: linear-gradient(
     to bottom right,
     var(--primary-gradient-3), 
@@ -31,4 +32,16 @@ body {
     var(--primary-gradient-1),
     var(--primary-gradient-1)
   );
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: clamp(200px, 25vw, 400px) 1fr clamp(200px, 25vw, 400px);
+  height: 100vh;
+}
+
+#main, #menu {
+  height: 100%;
 }

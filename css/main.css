@@ -1,0 +1,144 @@
+#main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+}
+
+#main .projects {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  width: clamp(100px, 20vw, 350px);
+  height: clamp(50px, 5vh, 150px);
+  background: linear-gradient(to right, var(--secondary-gradient-1), var(--secondary-gradient-2));
+  border-radius: 7px;
+}
+
+.projects > div > button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.tab-title {
+  color: white;
+  font-size: 1.6rem;
+  margin-left: 10px;
+}
+
+.grid-boxes {
+  display: grid;
+  height: 100%;
+  grid-template: 1fr 1fr 1fr / repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.grid-box {
+  background-color: var(--secondary-dark);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.line {
+  width: 10px;
+  height: 100%;
+  background: linear-gradient(var(--secondary-gradient-1), var(--secondary-gradient-2));
+}
+
+.grid-box .selected-line {
+  background: var(--secondary-highlight-1);
+}
+
+#right-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: clamp(20px, 8vh, 50px)
+}
+
+.profile-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: clamp(85px, 2vw, 150px);
+  height: clamp(80px, 2vh, 150px);
+  background: linear-gradient(var(--secondary-gradient-1), var(--secondary-gradient-2));
+  border-radius: 50%;
+}
+
+.profile-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 30px auto;
+}
+
+.profile-text-section {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Nunito', Arial;
+  color: var(--secondary-highlight-2);
+}
+
+.dashboard-text {
+  color: var(--secondary-highlight-1);
+}
+
+.messages-section,
+.quick-links-section {
+  width: 90%;
+  position: relative;
+  background-color: var(--primary-dark);
+  color: var(--secondary-highlight-2);
+  font-family: 'Nunito', Arial;
+  border-radius: 20px;
+}
+
+
+.messages-section {
+  height: 40%;
+  font-size: 1rem;
+}
+
+.quick-links-section{
+  height: 35%;
+  margin-bottom: 10px;
+}
+
+.messages-section h1,
+.quick-links-section h1 {
+  position: absolute;
+  color: var(--secondary-highlight-1);
+  font-family: 'Lobster Two', Arial;
+  top: -40px;
+  font-size: 1.5rem;
+}
+
+.messages-section .messages-text {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  padding: 40px;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.message-line {
+  background-color: var(--secondary-highlight-1);
+  width: 80%;
+  height: 1px;
+  color: transparent;
+}

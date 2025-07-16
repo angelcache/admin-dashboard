@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,24 +9,112 @@
   <link rel="stylesheet" href="css/theme.css">
   <link rel="stylesheet" href="css/menu.css">
   <link rel="stylesheet" href="css/modern-normalize.css">
+  <link rel="stylesheet" href="css/main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+    rel="stylesheet">
 </head>
-<body>
-  <section id="menu">
-    <div class="logo">
-      <img class="star-logo" src="assets/img/star-logo.svg" alt="star logo">
-      <img class="dashboard-logo" src="assets/img/dashboard-logo.svg" alt="dashboard logo">
-    </div>
 
-    <nav class="menu">
-      <button class="projects-menu-text active">Projects</button>
-      <button class="activities-menu-text">Activities</button>
-      <button class="messages-menu-text">Certificates</button>
-      <button class="messages-menu-text">Messages</button>
-    </nav>
-  </section>
+<body>
+  <div class="layout">
+    <section id="menu">
+      <div class="logo">
+        <img class="star-logo" src="assets/img/star-logo.svg" alt="star logo">
+        <img class="dashboard-logo" src="assets/img/dashboard-logo.svg" alt="dashboard logo">
+      </div>
+
+      <nav class="menu">
+        <button class="projects-menu-text active">Projects</button>
+        <button class="activities-menu-text">Activities</button>
+        <button class="messages-menu-text">Certificates</button>
+        <button class="messages-menu-text">Messages</button>
+      </nav>
+    </section>
+
+    <main id="main">
+      <div class="projects">
+        <div class="tab">
+          <p class="tab-title">Projects</p>
+        </div>
+        
+        <div>
+          <button>
+            <img src="assets/img/plus-icon.svg" alt="plus icon">
+          </button>
+          <button>
+            <img src="assets/img/minus-icon.svg" alt="minus-icon">
+          </button>
+        </div>
+      </div>
+
+      <div class="grid-boxes">
+        <div class="grid-box">
+          <div class="line selected-line">
+          </div>
+        </div>
+        <div class="grid-box">
+          <div class="line">
+          </div>
+        </div>
+        <div class="grid-box">
+          <div class="line">
+          </div>
+        </div>
+        <div class="grid-box">
+          <div class="line">
+          </div>
+        </div>
+        <div class="grid-box">
+          <div class="line">
+          </div>
+        </div>
+        <div class="grid-box">
+          <div class="line">
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <section id="right-bar">
+
+      <div class="profile-section">
+        <div class="profile-icon">
+          <img src="assets/gif/chick.gif" alt="chick profile" class="chick-profile">
+        </div>
+        <div class="profile-text-section">
+          <b class="dashboard-text">Dashboard Loaded.</b>
+          <p class="inspo-text">Let's get to work!</p>
+        </div>
+      </div>
+
+      <div class="messages-section">
+          <h1>Recent Messages</h1>
+          <div class="messages-text">
+            <p>Hi! Would you be interested in joining our club event?</p>
+            <div class="message-line">.</div>
+            <p>Hey, I love your portfolio! We're currently looking for..</p>
+            <div class="message-line">.</div>
+            <p>I'm Ro, my business provides mentorship for young adults..</p>
+            <div class="message-line">.</div>
+          </div>
+      </div>
+      
+      <div class="quick-links-section">
+        <h1>Quick Links</h1>
+        <img src="assets/img/linkedin-icon.svg" alt="linkedin icon" class="linkedin-icon">
+        <img src="assets/img/github-icon.svg" alt="github icon" class="github-icon">
+        <img src="assets/img/speaker-icon.svg" alt="speaker icon" class="speaker-icon">
+        <img src="assets/img/home-icon.svg" alt="home icon" class="home-icon">
+        <img src="assets/img/resume-icon.svg" alt="resume icon" class="linkedin-icon">
+        <img src="assets/img/code-icon.svg" alt="code icon" class="code-icon">
+      </div>
+    </section>
+
+  </div>
+
   <script src="js/dashboard.js"></script>
 </body>
+
 </html>

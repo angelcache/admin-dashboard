@@ -1,7 +1,5 @@
 #menu {
   background-color: var(--primary-dark);
-  width: clamp(300px, 30vw, 400px);
-  height: 100vh;
 }
 
 .logo {
@@ -13,11 +11,11 @@
 }
 
 .star-logo {
-  width: clamp(100px, 5%, 550px);
+  width: clamp(100px, 4%, 520px);
 }
 
 .dashboard-logo {
-  width: clamp(200px, 8%, 250px);
+  width: clamp(200px, 6%, 220px);
 }
 
 .menu {
