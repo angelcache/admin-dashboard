@@ -9,8 +9,8 @@ const projectLinks = [
   'https://angelcache.github.io/odin-landing-page/',
   'https://angelcache.github.io/wizard-duel-rps/',
   'https://angelcache.github.io/etch-a-sketch/',
+  'https://angelcache.github.io/calculator/',
   'https://angelcache.github.io/sign-up-form/',
-  'https://angelcache.github.io/calculator/'
 ]
 
 const dashboardButton = document.querySelectorAll(".menu button");
@@ -37,13 +37,13 @@ function addActiveButton(activeButton) {
       generateSection("project", projectLinks, 6);
       break;
     case "Experiences":
-      generateSection("project", 2);
+      generateSection("project", projectLinks, 2);
       break;
     case "Certificates":
       generateSection("", 0);
       break;
     case "Messages":
-      addMessagesSection("", 0);
+      generateSection("", 0);
       break;
   }
   tabTitle.innerText = activeButton.innerText;
@@ -82,12 +82,18 @@ function generateSection(section, link, boxesNumber) {
     zoomIcon.src = "assets/img/zoom-icon.png";
     zoomIcon.alt = "zoom icon";
 
+    if (i === 6) {
+      zoomIcon.classList.remove("zoom-icon");
+      zoomIcon.classList.add("zoom-icon-2");
+      zoomIcon.src = "assets/img/gold-zoom-icon.png";
+    }
+
     box.appendChild(line);
     box.appendChild(overlay);
     zoomLink.appendChild(zoomIcon);
     box.appendChild(zoomLink);
     box.appendChild(img);
     gridBoxesSection.appendChild(box);
-    setupLineListener(); // Reset event listeners for main
+    setupLineListener(i); // Reset event listeners for main
   }
 }

@@ -5,9 +5,8 @@
 
 
 setupLineListener();
-addGoldZoom();
 
-export function setupLineListener() {
+export function setupLineListener(currentProject) {
   const gridBoxes = document.querySelectorAll(".grid-boxes .grid-box");
 
   gridBoxes.forEach((gridBox) => {
@@ -17,6 +16,8 @@ export function setupLineListener() {
       addGoldLine(gridLine);
     });
   });
+
+  addGoldZoom();
 }
 
 export function addGoldLine(gridLine) {
@@ -41,7 +42,6 @@ function addGoldZoom() {
 
   zoomIcons.forEach((zoomIcon) => {
     zoomIcon.addEventListener('mouseout', () => {
-      console.log(zoomIcon);
       zoomIcon.src = "./assets/img/zoom-icon.png";
     })
   })
