@@ -5,6 +5,7 @@
 
 
 setupLineListener();
+addGoldZoom();
 
 export function setupLineListener() {
   const gridBoxes = document.querySelectorAll(".grid-boxes .grid-box");
@@ -27,4 +28,21 @@ export function addGoldLine(gridLine) {
     }
   });
   gridLine.classList.add("selected-line");
+}
+
+function addGoldZoom() {
+  const zoomIcons = document.querySelectorAll(".grid-box .zoom-icon");
+
+  zoomIcons.forEach((zoomIcon) => {
+    zoomIcon.addEventListener('mouseenter', () => {
+      zoomIcon.src = "./assets/img/gold-zoom-icon.png";
+    })
+  })
+
+  zoomIcons.forEach((zoomIcon) => {
+    zoomIcon.addEventListener('mouseout', () => {
+      console.log(zoomIcon);
+      zoomIcon.src = "./assets/img/zoom-icon.png";
+    })
+  })
 }
