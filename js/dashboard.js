@@ -25,24 +25,57 @@ function addActiveButton(activeButton) {
   const section = activeButton.innerText;
 
   switch (section) {
-    case "Project":
-      addProjectsSection();
+    case "Projects":
+      generateSection("project", 6);
       break;
     case "Experiences":
-      addActivitesSection();
+      generateSection("project", 2);
       break;
     case "Certificates":
-      addCertificatesSection();
+      generateSection("", 0);
       break;
     case "Messages":
-      addMessagesSection();
+      addMessagesSection("", 0);
       break;
   }
-  if (section == "Projects") {
-    addProjectsSection();
-  } 
   tabTitle.innerText = activeButton.innerText;
 
+}
+
+function generateSection(section, boxesNumber) {
+  /**
+   * Takes the section and generates the
+   * number of boxes in it.
+   */
+
+  gridBoxesSection.innerHTML = "";
+
+  for (let i = 1; i <= boxesNumber; i++) {
+    const box = document.createElement("div");
+    box.classList.add("grid-box");
+
+    const line = document.createElement("div");
+    line.classList.add("line");
+
+    const img = document.createElement("img");
+    img.src = `assets/img/${section}-${i}.png`;
+    img.classList.add("box-image");
+
+    const overlay = document.createElement("div");
+    overlay.classList.add("overlay");
+
+    const zoomIcon = document.createElement("img");
+    zoomIcon.classList.add("zoom-icon");
+    zoomIcon.src = "assets/img/zoom-icon.png";
+    zoomIcon.alt = "zoom icon";
+
+    box.appendChild(line);
+    box.appendChild(overlay);
+    box.appendChild(zoomIcon);
+    box.appendChild(img);
+    gridBoxesSection.appendChild(box);
+    setupLineListener(); // Reset event listeners for main
+  }
 }
 
 function addProjectsSection() {
@@ -62,8 +95,14 @@ function addProjectsSection() {
     const overlay = document.createElement("div");
     overlay.classList.add("overlay");
 
+    const zoomIcon = document.createElement("img");
+    zoomIcon.classList.add("zoom-icon");
+    zoomIcon.src = "assets/img/zoom-icon.png";
+    zoomIcon.alt = "zoom icon";
+
     projectBox.appendChild(line);
     projectBox.appendChild(overlay);
+    projectBox.appendChild(zoomIcon);
     projectBox.appendChild(projectImg);
     gridBoxesSection.appendChild(projectBox);
     setupLineListener(); // Reset event listeners for main
@@ -98,26 +137,26 @@ function addActivitesSection() {
 function addCertificatesSection() {
   gridBoxesSection.innerHTML = "";
 
-  for (let i = 1; i <= 1; i++) {
-    const certificateBox = document.createElement("div");
-    certificateBox.classList.add("grid-box");
+  // for (let i = 1; i <= 1; i++) {
+  //   const certificateBox = document.createElement("div");
+  //   certificateBox.classList.add("grid-box");
 
-    const line = document.createElement("div");
-    line.classList.add("line");
+  //   const line = document.createElement("div");
+  //   line.classList.add("line");
 
-    const certificateImg = document.createElement("img");
-    certificateImg.src = `assets/img/project-${i}.png`;
-    certificateImg.classList.add("project-image");
+  //   const certificateImg = document.createElement("img");
+  //   certificateImg.src = `assets/img/project-${i}.png`;
+  //   certificateImg.classList.add("project-image");
 
-    const overlay = document.createElement("div");
-    overlay.classList.add("overlay");
+  //   const overlay = document.createElement("div");
+  //   overlay.classList.add("overlay");
 
-    certificateBox.appendChild(line);
-    certificateBox.appendChild(overlay);
-    certificateBox.appendChild(certificateImg);
-    gridBoxesSection.appendChild(certificateBox);
-    setupLineListener();
-  }
+  //   certificateBox.appendChild(line);
+  //   certificateBox.appendChild(overlay);
+  //   certificateBox.appendChild(certificateImg);
+  //   gridBoxesSection.appendChild(certificateBox);
+  //   setupLineListener();
+  // }
 }
 
 function addMessagesSection() {
