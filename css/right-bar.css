@@ -123,5 +123,5 @@
 
 .quick-links-imgs img {
   width: clamp(40px, 90%, 60px);
-  height: clamp(50px, 90%, 60px);
+  height: auto;
 }
