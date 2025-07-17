@@ -6,7 +6,7 @@
 
 setupLineListener();
 
-export function setupLineListener(currentProject) {
+export function setupLineListener() {
   const gridBoxes = document.querySelectorAll(".grid-boxes .grid-box");
 
   gridBoxes.forEach((gridBox) => {

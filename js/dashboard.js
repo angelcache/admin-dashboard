@@ -83,6 +83,7 @@ function generateSection(section, link, boxesNumber) {
     zoomIcon.alt = "zoom icon";
 
     if (i === 6) {
+      zoomLink.href = "/";
       zoomIcon.classList.remove("zoom-icon");
       zoomIcon.classList.add("zoom-icon-2");
       zoomIcon.src = "assets/img/gold-zoom-icon.png";
@@ -94,6 +95,6 @@ function generateSection(section, link, boxesNumber) {
     box.appendChild(zoomLink);
     box.appendChild(img);
     gridBoxesSection.appendChild(box);
-    setupLineListener(i); // Reset event listeners for main
+    setupLineListener(); // Reset event listeners for main
   }
 }

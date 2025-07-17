@@ -41,6 +41,12 @@
   gap: 20px;
 }
 
+@media (max-width: 500px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .grid-box {
   position: relative;
   background-color: var(--secondary-dark);
@@ -58,6 +64,15 @@
   z-index: 10;
 }
 
+.zoom-icon:hover {
+  animation: gentleRotate 1s ease-in-out;
+}
+
+@keyframes gentleRotate {
+  0%   { transform: rotate(0deg); }
+  100%  { transform: rotate(360deg); }
+}
+
 .line {
   width: 10px;
   height: 100%;
@@ -67,91 +82,6 @@
 
 .grid-box .selected-line {
   background: var(--secondary-highlight-1);
-}
-
-#right-bar {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  gap: clamp(20px, 8vh, 50px)
-}
-
-.profile-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: clamp(85px, 2vw, 150px);
-  height: clamp(80px, 2vh, 150px);
-  background: linear-gradient(var(--secondary-gradient-1), var(--secondary-gradient-2));
-  border-radius: 50%;
-}
-
-.profile-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  margin: 20px auto;
-}
-
-.profile-text-section {
-  display: flex;
-  flex-direction: column;
-  font-family: 'Nunito', Arial;
-  color: var(--secondary-highlight-2);
-}
-
-.dashboard-text {
-  color: var(--secondary-highlight-1);
-}
-
-.messages-section,
-.quick-links-section {
-  width: 90%;
-  position: relative;
-  background-color: var(--primary-dark);
-  color: var(--secondary-highlight-2);
-  font-family: 'Nunito', Arial;
-  border-radius: 20px;
-}
-
-.messages-section {
-  height: 40%;
-  font-size: 1rem;
-}
-
-.quick-links-section {
-  height: 35%;
-  margin-bottom: 10px;
-}
-
-.messages-section h1,
-.quick-links-section h1 {
-  position: absolute;
-  color: var(--secondary-highlight-1);
-  font-family: 'Lobster Two', Arial;
-  top: -40px;
-  font-size: 1.5rem;
-}
-
-.messages-section .messages-text {
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  gap: 1rem;
-  padding: 40px;
-  overflow-y: auto;
-  scrollbar-width: none;
-}
-
-.message-line {
-  background-color: var(--secondary-highlight-1);
-  width: 80%;
-  height: 1px;
-  color: transparent;
 }
 
 .quick-links-imgs {
@@ -183,4 +113,3 @@
   opacity: 60%;
   padding-left: 10px;
 }
-
