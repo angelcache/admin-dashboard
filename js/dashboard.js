@@ -1,8 +1,9 @@
 /**
  * Dashboard functionality
- * Since this is a mockup will only
- * change the label at the top
+ * Changes labels and boxes
  */
+
+import { setupLineListener, addGoldLine } from './main.js';
 
 const dashboardButton = document.querySelectorAll(".menu button");
 const tabTitle = document.querySelector(".tab-title");
@@ -65,6 +66,7 @@ function addProjectsSection() {
     projectBox.appendChild(overlay);
     projectBox.appendChild(projectImg);
     gridBoxesSection.appendChild(projectBox);
+    setupLineListener(); // Reset event listeners for main
   }
 }
 
@@ -89,6 +91,7 @@ function addActivitesSection() {
     experienceBox.appendChild(overlay);
     experienceBox.appendChild(experienceImg);
     gridBoxesSection.appendChild(experienceBox);
+    setupLineListener();
   }
 }
 
@@ -113,6 +116,7 @@ function addCertificatesSection() {
     certificateBox.appendChild(overlay);
     certificateBox.appendChild(certificateImg);
     gridBoxesSection.appendChild(certificateBox);
+    setupLineListener();
   }
 }
 

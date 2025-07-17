@@ -46,6 +46,7 @@
   background-color: var(--secondary-dark);
   border-radius: 20px;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .line {
@@ -105,7 +106,6 @@
   font-family: 'Nunito', Arial;
   border-radius: 20px;
 }
-
 
 .messages-section {
   height: 40%;
