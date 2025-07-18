@@ -3,7 +3,7 @@
  * Changes labels and boxes
  */
 
-import { setupLineListener, addGoldLine } from './main.js';
+import { setupLineListener } from './main.js';
 
 const projectLinks = [
   'https://angelcache.github.io/odin-landing-page/',
@@ -37,7 +37,7 @@ function addActiveButton(activeButton) {
       generateSection("project", projectLinks, 6);
       break;
     case "Experiences":
-      generateSection("project", projectLinks, 2);
+      generateSection("experiences", projectLinks, 2);
       break;
     case "Certificates":
       generateSection("", 0);
@@ -82,7 +82,9 @@ function generateSection(section, link, boxesNumber) {
     zoomIcon.src = "assets/img/zoom-icon.png";
     zoomIcon.alt = "zoom icon";
 
-    if (i === 6) {
+    if (i === 6 || (
+      section === "experiences" && !document.body.classList.contains("light-mode")
+    )) {
       zoomLink.href = "/";
       zoomIcon.classList.remove("zoom-icon");
       zoomIcon.classList.add("zoom-icon-2");

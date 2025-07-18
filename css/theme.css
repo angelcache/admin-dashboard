@@ -8,4 +8,18 @@
   --secondary-highlight-1: #EBCA50;
   --secondary-highlight-2: #FFFFFF;
   --secondary-dark: #7C7C7C;
+  --box-color: #19182D;
+}
+
+body.light-mode {
+  --primary-gradient-1: #D3BDFF;
+  --primary-gradient-2: #F8D4F3;
+  --primary-gradient-3: #FFFFFF;
+  --primary-dark: #7EB4DE;
+  --secondary-gradient-1: #7EB4DE;
+  --secondary-gradient-2: #C3B2E6;
+  --secondary-highlight-1: #333344;
+  --secondary-highlight-2: #FFFFFF;
+  --secondary-dark: #EBCA50;
+  --box-color: #FFFFFF;
 }
