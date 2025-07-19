@@ -27,7 +27,7 @@
 .profile-text-section {
   display: flex;
   flex-direction: column;
-  font-family: 'Nunito', Arial;
+  font-family: 'Nunito Sans', Arial;
   color: var(--secondary-highlight-2);
 }
 
@@ -41,7 +41,7 @@
   position: relative;
   background-color: var(--primary-dark);
   color: var(--secondary-highlight-2);
-  font-family: 'Nunito', Arial;
+  font-family: 'Nunito Sans', Arial;
   border-radius: 20px;
 }
 
