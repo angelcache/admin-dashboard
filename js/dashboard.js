@@ -121,5 +121,5 @@ function generateSection(section, link, boxesNumber) {
 function removeGoldIcons(button) {
   const buttonImg = button.firstElementChild;
 
-  buttonImg.src = `../assets/img/${button.innerText.toLowerCase()}-icon.png`;
+  buttonImg.src = `assets/img/${button.innerText.toLowerCase()}-icon.png`;
 }
