@@ -36,9 +36,14 @@ function addActiveButton(activeButton) {
   dashboardButton.forEach((button) => {
     if (button.classList.contains("active")) {
       button.classList.remove("active");
+      removeGoldIcons(button);
     }
   });
   activeButton.classList.add("active");
+
+  const buttonImg = activeButton.firstElementChild;
+  buttonImg.src = `assets/img/gold-${activeButton.innerText.toLowerCase()}-icon.png`;
+
   const section = activeButton.innerText;
 
   switch (section) {
@@ -111,4 +116,10 @@ function generateSection(section, link, boxesNumber) {
     gridBoxesSection.appendChild(box);
     setupLineListener(); // Reset event listeners for main
   }
+}
+
+function removeGoldIcons(button) {
+  const buttonImg = button.firstElementChild;
+
+  buttonImg.src = `../assets/img/${button.innerText.toLowerCase()}-icon.png`;
 }
