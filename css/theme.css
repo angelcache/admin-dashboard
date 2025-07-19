@@ -9,6 +9,7 @@
   --secondary-highlight-2: #FFFFFF;
   --secondary-dark: #7C7C7C;
   --box-color: #19182D;
+  --line-color: #EBCA50;
 }
 
 body.light-mode {
@@ -22,4 +23,5 @@ body.light-mode {
   --secondary-highlight-2: #FFFFFF;
   --secondary-dark: #EBCA50;
   --box-color: #FFFFFF;
+  --line-color: #EBCA50;
 }

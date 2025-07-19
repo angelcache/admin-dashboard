@@ -40,6 +40,7 @@ body {
   display: grid;
   grid-template-columns: clamp(200px, 25vw, 400px) 1fr clamp(200px, 25vw, 400px);
   height: 100vh;
+  overflow: hidden;
 }
 
 #main, #menu {

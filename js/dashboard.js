@@ -13,6 +13,15 @@ const projectLinks = [
   'https://angelcache.github.io/sign-up-form/',
 ]
 
+const experienceLinks = [
+  'https://www.ualberta.ca/en/index.html',
+  'https://www.missionspacewalker.ca',
+]
+
+const certificateLinks = [
+  'https://certificates.mooc.fi/validate/4csz8mzq2g9',
+]
+
 const dashboardButton = document.querySelectorAll(".menu button");
 const tabTitle = document.querySelector(".tab-title");
 const gridBoxesSection = document.querySelector(".grid-boxes");
@@ -37,10 +46,10 @@ function addActiveButton(activeButton) {
       generateSection("project", projectLinks, 6);
       break;
     case "Experiences":
-      generateSection("experiences", projectLinks, 2);
+      generateSection("experiences", experienceLinks, 2);
       break;
     case "Certificates":
-      generateSection("", 0);
+      generateSection("certificate", certificateLinks, 1);
       break;
     case "Messages":
       generateSection("", 0);
@@ -83,12 +92,15 @@ function generateSection(section, link, boxesNumber) {
     zoomIcon.alt = "zoom icon";
 
     if (i === 6 || (
-      section === "experiences" && !document.body.classList.contains("light-mode")
+      (section === "experiences" || section === "certificate") && !document.body.classList.contains("light-mode")
     )) {
-      zoomLink.href = "/";
       zoomIcon.classList.remove("zoom-icon");
       zoomIcon.classList.add("zoom-icon-2");
       zoomIcon.src = "assets/img/gold-zoom-icon.png";
+    }
+
+    if (i == 6) {
+      zoomLink.href = "/";
     }
 
     box.appendChild(line);

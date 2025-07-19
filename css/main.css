@@ -1,16 +1,33 @@
 #main {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex: 1 1 auto;
+  flex-direction: column; 
   gap: 3rem;
   width: 100%;
-  height: 100%;
-  padding: 40px;
+  height: 100vh;
+  padding: clamp(20px, 5vh, 40px);
+  overflow: hidden;
+  min-height: 0;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
 }
 
 #main .projects {
   display: flex;
   justify-content: space-between;
+}
+
+html, body, #main, .grid {
+  height: 100%;
+}
+
+#main .grid {
+  flex: 1;
+  overflow-y: auto;
+  width: 100%;
+  height: 400px;
 }
 
 .tab {
@@ -37,18 +54,13 @@
 .grid-boxes {
   display: grid;
   height: 100%;
-  grid-template: 1fr 1fr 1fr / repeat(auto-fit, minmax(250px, 1fr));
+  grid-template: repeat(3, minmax(100px, 1fr)) / repeat(2, minmax(250px, 1fr));
   gap: 20px;
-}
-
-@media (max-width: 500px) {
-  .grid-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 .grid-box {
   position: relative;
+  height: 100%;
   background-color: var(--secondary-dark);
   border-radius: 20px;
   overflow: hidden;
@@ -82,7 +94,7 @@
 }
 
 .grid-box .selected-line {
-  background: var(--secondary-highlight-1);
+  background: var(--line-color);
 }
 
 .overlay {
