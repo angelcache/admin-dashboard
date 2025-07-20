@@ -80,7 +80,7 @@ function generateSection(section, link, boxesNumber) {
     line.classList.add("line");
 
     const img = document.createElement("img");
-    img.src = `assets/img/${section}-${i}.png`;
+    img.src = `./assets/img/${section}-${i}.png`;
     img.classList.add("box-image");
 
     const overlay = document.createElement("div");
@@ -93,7 +93,7 @@ function generateSection(section, link, boxesNumber) {
 
     const zoomIcon = document.createElement("img");
     zoomIcon.classList.add("zoom-icon");
-    zoomIcon.src = "assets/img/zoom-icon.png";
+    zoomIcon.src = "./assets/img/zoom-icon.png";
     zoomIcon.alt = "zoom icon";
 
     if (i === 6 || (
@@ -101,11 +101,11 @@ function generateSection(section, link, boxesNumber) {
     )) {
       zoomIcon.classList.remove("zoom-icon");
       zoomIcon.classList.add("zoom-icon-2");
-      zoomIcon.src = "assets/img/gold-zoom-icon.png";
+      zoomIcon.src = "./assets/img/gold-zoom-icon.png";
     }
 
     if (i == 6) {
-      zoomLink.href = "/";
+      zoomLink.href = none;
     }
 
     box.appendChild(line);
@@ -121,5 +121,5 @@ function generateSection(section, link, boxesNumber) {
 function removeGoldIcons(button) {
   const buttonImg = button.firstElementChild;
 
-  buttonImg.src = `assets/img/${button.innerText.toLowerCase()}-icon.png`;
+  buttonImg.src = `./assets/img/${button.innerText.toLowerCase()}-icon.png`;
 }
