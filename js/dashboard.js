@@ -105,7 +105,7 @@ function generateSection(section, link, boxesNumber) {
     }
 
     if (i == 6) {
-      zoomLink.href = "/";
+      zoomLink.href = "./";
     }
 
     box.appendChild(line);
