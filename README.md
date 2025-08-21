@@ -1,6 +1,6 @@
 # 🌟 Developer Dashboard  
 
-This is a mockup for my portfolio's backend, built as part of **The Odin Project**.  
+This is a mockup for a portfolio backend, built as part of **The Odin Project**.  
 I customized and designed it specifically to fit my portfolio’s aesthetic.
 The focus of this project was to practice using grid and flex together to create a solid layout.
 
